@@ -18,11 +18,11 @@ public class ApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		ResponseEntity<String> entity = restTemplate.getForEntity("/carlist",String.class);
+		ResponseEntity<String> entity = restTemplate.getForEntity("/hello",String.class);
 		System.out.println(entity.getBody());
 
 		// 通过 assertThat 进行断言判断
-		System.out.println(assertThat(entity.getBody()));
-		System.out.println(assertThat(entity.getStatusCodeValue()).isEqualTo(200));
+		/*System.out.println(assertThat(entity.getBody()));
+		System.out.println(assertThat(entity.getStatusCodeValue()).isEqualTo(200));*/
 	}
 }
